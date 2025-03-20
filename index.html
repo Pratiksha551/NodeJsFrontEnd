@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            UserManagement
+        </div>
+        <button onclick="openCloseModal('addmodal')">Add New User</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            <!-- <tr>
+                <td>1</td>
+                <td>Aasha</td>
+                <td>23</td>
+                <td>Mumbai</td>
+                <td>
+                    <i class="fa-user-pen fa-solid" onclick="openCloseModal('updatemodal')"></i>
+                    
+                    <i class="fa-trash fa-solid"></i>
+                    
+                </td>
+            </tr> -->
+        </tbody>
+    </table>
+
+    <!--Modal -->
+    <div class="modal" id="addmodal">
+        <div class="modal-content">
+            <i class="fa-circle-xmark fa-solid cross" onclick="openCloseModal('addmodal')"></i>
+            <h1>Add New User</h1>
+
+            <div class="addform">
+                <input type="text"placeholder="Enter Name" name="name" id="name">
+                <input type="number"placeholder="Enter Age" name="age" id="age">
+                <input type="city"placeholder="Enter City" name="city" id="city">
+                <button onclick="addNewUser()">Add</button>
+            </div>
+
+        </div>
+    </div>
+
+     <!-- modal  -->
+     <div class="modal" id="updatemodal">
+        <div class="modal-content">
+            <i class="fa-solid fa-circle-xmark cross" onclick="openCloseModal('updatemodal')"></i>
+
+            <h1>Update User</h1>
+
+            <div class="addform">
+                <input type="text" id="updateId" hidden>
+                <input type="text" placeholder="Enter Name" id="updateName">
+                <input type="number" placeholder="Age" id="updateAge">
+                <input type="text" placeholder="Enter City" id="updateCity">
+                <button onclick="updateUser()">Update</button>
+            </div>
+
+        </div>
+     </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

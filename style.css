@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(83, 125, 158);
+    color: white;
+    font-family: "Roboto";
+    line-height: 26px;
+    letter-spacing: 1.25px;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.logo {
+    font-size: 30px;
+    font-weight: 500;
+}
+button {
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: 300;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    transition: all 0.5s ease;
+    color: white;
+}
+button:hover{
+    background-color:rgb(255, 255, 255) ;
+    color: black;
+    transform: scale(0.9);
+}
+table{
+    border: 2px solid white;
+    width: 85%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+th, td{
+    border: 2px solid white;
+    padding: 5px 10px;
+    text-align: start;
+}
+
+/* //create user modal */
+.modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.modal-content{
+    min-height: 100px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 35%;
+    color: black;
+    height: auto;
+    position: relative;
+}
+.modal-content h1{
+    color: black;
+    text-align: center;
+}
+.modal-content button{
+    color: white;
+    border: 1px solid white;
+    background-color: rgb(218, 20, 119);
+}
+.cross{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 30px;
+   cursor: pointer;
+   color: red;
+}
+.addform{
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   margin-top: 15px;
+}
+input {
+    padding: 10px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+}
